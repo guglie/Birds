@@ -1,3 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+struct step {
+   float x,y, speed;
+   struct step * next;
+};
+
+
+
+/*
+step * steplist = NULL;
+int stepNum = 0;
+
+
+void pushStep(float x, float y, float speed)
+{
+	step* first = steplist;
+	
+	steplist = (step*)malloc(sizeof(step));
+	
+	steplist->x = x;
+	steplist->y = y;
+	steplist->speed = speed;
+	steplist->next = first;
+	
+	stepNum++;
+}
+
+void clearStepList()
+{
+	stepNum = 0;
+	step* erase;
+	
+	while (steplist != NULL)
+	{
+		erase = steplist;
+		steplist = steplist->next;
+		free(erase);
+	}
+	
+}*/
 
 
 class bird

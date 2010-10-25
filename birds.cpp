@@ -12,7 +12,9 @@ extern "C" {
 
 #include "pointLineSegmentDistance.h"
 #include "options.h"
+#include "stats.h"
 #include "utils.h"
+#include "bird.h"
 
 using namespace std;
 
@@ -41,58 +43,10 @@ using namespace std;
 
 
 
-//stats
-float topAccel = 0.0;
-float topSpeed = 0.0;
-float topSight = 0.0;
-float averageSpeed = 0.0;
-long int unsigned cicli = 0;
-
-float xUserAccel = 0.0;
-float yUserAccel = 0.0;
-
-//ostacoli
-int obstNum = 0;
-float obstacles [MAX_OBSTACLES][4];
 
 
-struct step {
-   float x,y, speed;
-   struct step * next;
-};
-
-/*
-step * steplist = NULL;
-int stepNum = 0;
 
 
-void pushStep(float x, float y, float speed)
-{
-	step* first = steplist;
-	
-	steplist = (step*)malloc(sizeof(step));
-	
-	steplist->x = x;
-	steplist->y = y;
-	steplist->speed = speed;
-	steplist->next = first;
-	
-	stepNum++;
-}
-
-void clearStepList()
-{
-	stepNum = 0;
-	step* erase;
-	
-	while (steplist != NULL)
-	{
-		erase = steplist;
-		steplist = steplist->next;
-		free(erase);
-	}
-	
-}*/
 
 
 

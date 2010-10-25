@@ -88,3 +88,8 @@ int birdNum = 0;
 class bird * birds[MAXBIRDS];
 int liveBirdNum = 0;
 int selectedBird = -1;
+
+
+//ostacoli
+float obstacles [MAX_OBSTACLES][4];
+int obstNum = 0;
