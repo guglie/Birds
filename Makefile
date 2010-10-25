@@ -4,8 +4,10 @@ LIBS = -framework GLUT -framework OPENGL
 CFLAGS = -Wall
 LFLAGS = $(CFLAGS) $(LIBS)
 
-all: birds.cpp
-	$(CC) $(LFLAGS) birds.cpp -o birds
+all: birds *.h
+
+%: %.cpp
+	$(CC) $(LFLAGS) $< -o $@
 
 
 clean:
