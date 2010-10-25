@@ -2279,11 +2279,13 @@ int main(int argc, char *argv[]) //modificata il 13.9.10
   }
 
   if (errorStart) {
-    printf("Usage: ./birds n [-d] [-ot] [-ot2] [-wb]    ( where \'n\' is the starting number of birds and must be smaller than %d \n", MAXBIRDS);
-    printf("																							-d (optional) starts birds in debug mode\n");
-    printf("																							-ot (optional) tests if birds can pass through obstacles\n");
-    printf("																							-ot2 (optional) tests the vector resultant from an obstacle\n");
-		printf("																							-wb (optional) sets a white background (better bird-look) )\n");
+    printf("Usage: ./birds n [-d] [-ot] [-ot2] [-wb] \n");
+		printf("   ( where \'n\' is the starting number of birds and must be smaller than %d \n", MAXBIRDS);
+    printf("     -d (optional) starts birds in debug mode\n");
+    printf("     -ot (optional) tests if birds can pass through obstacles\n");
+    printf("     -ot2 (optional) tests the vector resultant from an obstacle\n");
+		printf("     -ot2c (optional) tests the vector resultant from an obstacle in a campo (field) mode\n");
+		printf("     -wb (optional) sets a white background (better bird-look) )\n");
     return 0;
   }
 
