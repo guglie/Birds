@@ -626,3 +626,17 @@ void accelForHawks(float * xAcc, float * yAcc) {
 	}
 	
 };
+
+
+/*
+static void stepCallback (int v) {
+	
+	if(showSteps && selectedBird != -1 && birds[selectedBird]->live)
+	{
+		pushStep(birds[selectedBird]->posX,birds[selectedBird]->posY, birds[selectedBird]->speed);
+	}
+	
+	//call back again after elapsedUSecs have passed
+	if(!stop) glutTimerFunc (millsec_per_frame*4>1000?1000:millsec_per_frame*4, stepCallback, v);
+}
+*/
