@@ -35,7 +35,7 @@ using namespace std;
  * v- OSTACOLI: Segmenti che gli uccelli devono evitare (tramite un'apposito calcolo) per non incontrare la morte.
  * v- STEPS PER TUTTI: Inserire nella classe bird un vettore che mantenga lo storico delle posizioni (quindi un percorso).
  *                    Con possibilità di visualizzare tutti i percorsi insieme.
- * - ANALISI PERCORSI PREFERITI: Mappare la presenza degli uccelli durante il tempo suddividendo l'area in tanti quadrati
+ * v- ANALISI PERCORSI PREFERITI: Mappare la presenza degli uccelli durante il tempo suddividendo l'area in tanti quadrati
  *															 e per ogni quadrato tenere un contatore. Incrementare il contatore aggiungendo il numero
  *															 di uccelli interni al quadrato relativo ogni istante di tempo (o anche più raramente se
  *															 i quadrati sono abbastanza grandi).
@@ -47,6 +47,8 @@ using namespace std;
  *															 di uccelli. Inserire una modalità "velocità massima" (niente ritardi, magari anche senza
  *															 calcoli grafici).
  * - MIGLIORIE ALLA PASSMAP: Possibilità di scegliere la definizione, salvataggi automatici (immagini o dati) ogni tot.
+ * - DIRMAP: Simile alla passMap, ma registra la somma delle velocità di tutti gli uccelli passati (e il numero) in modo
+ *           da mostrare una serie di vettori (uno per settore, che parte dal suo centro) proporzionali alla media.
  */
 
 
@@ -197,9 +199,31 @@ int main(int argc, char *argv[]) //modificata il 13.9.10
   birds[0]->hawk = true;
   birdNum++;
   liveBirdNum++;
+	
+	glutSetMenu(killSubMenu);
+	glutAddMenuEntry("ID 0", 0 - startbirds);
+	glutSetMenu(selectSubMenu);
+	glutAddMenuEntry("ID 0", 0);
+	
+	
+	birds[1] = new bird(0);
+  birds[1]->hawk = true;
+  birdNum++;
+  liveBirdNum++;
+	
+	glutSetMenu(killSubMenu);
+	glutAddMenuEntry("ID 0", 0 - startbirds);
+	glutSetMenu(selectSubMenu);
+	glutAddMenuEntry("ID 0", 0);
+	
+	
+	
+	
+	
+
 
   if(!obstacleTest2)
-    for (int i = 1; i < startbirds; i++) {
+    for (int i = birdNum; i < startbirds; i++) {
       birds[i] = new bird(i);
       birdNum++;
       liveBirdNum++;

@@ -5,7 +5,7 @@ void pauseBirds (void) {
 			millsec_per_frame = old_millsec;
 		} else {
 			old_millsec = millsec_per_frame;
-			millsec_per_frame = 1000 / FRAMES_PER_SEC * 100;
+			millsec_per_frame = 1000 / FRAMES_PER_SEC * 10;
 		}
 	paused = !paused;
 }
@@ -76,6 +76,13 @@ void randomVector(float * vx, float * vy, float max) {
 
     if(DEBUG) {printf("\nDEBUG randomVector vx=%f vy=%f\n",(*vx),(*vy)); fflush(stdout);}
 	reduceVectComponentsToMax(vx,vy,max);
+}
+
+void limitToBounds (float* x, float top, float bottom) {
+	if((*x) < bottom)
+		(*x) = bottom;
+	else if ((*x) > top)
+		(*x) = top;
 }
 
 

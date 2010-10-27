@@ -46,6 +46,11 @@ void myKeyboard(unsigned char ch, int x, int y)  //modificata il 13.9.10
     }
     else if(ch=='m') {
       showPassMap = !showPassMap;
+      if(showPassMap)
+      	showBirds = false;
+      else
+      	showBirds = true;
+      
       pauseBirds();
       glutPostRedisplay();
     }

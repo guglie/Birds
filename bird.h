@@ -526,8 +526,10 @@ void accelForHawks(float * xAcc, float * yAcc) {
           }
 
 
-
-          //pushStep(posX,posY,speed);
+          if(showSteps)
+          	pushStep(posX,posY,speed);
+          
+          
           if(DEBUG) {printf("\nDEBUG step. bird ID %d \n", id); fflush(stdout);}
 			// per tutti gli ostacoli calcola la distanza
 			//calcNearObst();
@@ -601,12 +603,6 @@ void accelForHawks(float * xAcc, float * yAcc) {
 			
 			speed = sqrt(pow(xSpeed,2) + pow(ySpeed,2));
 			
-			/*if(posX > 1.0) posX = -1.0;
-			else if(posX < -1.0) posX = 1.0;
-			
-			if(posY > 1.0) posY = -1.0;
-			else if(posY < -1.0) posY = 1.0;
-			*/
 			
 			if(nativeColor && dinamicColor)
 			{

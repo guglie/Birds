@@ -8,6 +8,7 @@
 		#include <glu.h>
 #endif
 
+#define OBST_MAX_LENGHT 0.5   //set to 0.0 to disable
 
 #define MAXBIRDS 800
 #define MAX_BIRDS_TO_FOLLOW 20
@@ -23,7 +24,7 @@ bool showPassMap = false;
 
 #define EAT_DIST 0.003
 
-#define MAX_OBSTACLES 2
+#define MAX_OBSTACLES 5
 
 
 bool showBirds = true;

@@ -238,6 +238,12 @@ void menuecho(int v)
 		if(showSteps) {
 			glutChangeToMenuEntry(6,"Hide Steps",93);
 		}else {
+			//cancella gli step
+			for(int i = 0; i < birdNum; i++) {
+				if(birds[i]->live)
+					birds[i]->clearStepList();
+			}
+			
 			glutChangeToMenuEntry(6,"Show Steps",93);
 		}
 			//clearStepList();
