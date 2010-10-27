@@ -1,3 +1,30 @@
+long unsigned int passMap [QUADS_FOR_EDGE_OF_MAP][QUADS_FOR_EDGE_OF_MAP];
+long unsigned int maxvalPass = 0;
+float quadMapLength = 2.0 / QUADS_FOR_EDGE_OF_MAP;
+
+void passMapInit (){
+	for(int i=0; i<QUADS_FOR_EDGE_OF_MAP; i++)
+		for(int j=0; j<QUADS_FOR_EDGE_OF_MAP; j++)
+			passMap[i][j]=0;
+}
+
+
+void passMapUpdate (float birdX, float birdY) {
+	
+	if(birdX > -1.0 && birdX < 1.0 && birdY > -1.0 && birdY < 1.0) {
+	
+		int x = (int)((birdX+1.0)/quadMapLength), y = (int)((birdY+1.0)/quadMapLength);
+	
+		//printf("\n  maxvalPass= %ld x=%d, y=%d\n",maxvalPass, x, y);
+		//fflush(stdout);
+	
+		passMap[x][y] += 1;
+	
+		if(passMap[x][y] > maxvalPass)
+			maxvalPass = passMap[x][y];
+	}	
+}
+
 
 static void statsUpdate (int v) {  //modificata il 13.9.10
 	

@@ -17,13 +17,7 @@ void myKeyboard(unsigned char ch, int x, int y)  //modificata il 13.9.10
 		birds[selectedBird]->kill();
 	}
 	else if(ch=='p') {
-		if(paused) {
-			millsec_per_frame = old_millsec;
-		} else {
-			old_millsec = millsec_per_frame;
-			millsec_per_frame = 1000 / FRAMES_PER_SEC * 100;
-		}
-		paused = !paused;
+		pauseBirds();
 	}
 	else if(ch=='w' && selectedBird != -1) {
 		//printf("\nDEBUG2 myKeyboard: tasto premuto \'%c\'. yaccel = %.3f\n", ch, birds[selectedBird]->maxAccel); fflush(stdout);
@@ -48,6 +42,11 @@ void myKeyboard(unsigned char ch, int x, int y)  //modificata il 13.9.10
     }
     else if(ch=='c' && obstacleTest2) {
       useCampo = !useCampo;
+      glutPostRedisplay();
+    }
+    else if(ch=='m') {
+      showPassMap = !showPassMap;
+      pauseBirds();
       glutPostRedisplay();
     }
 }

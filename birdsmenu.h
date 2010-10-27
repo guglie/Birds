@@ -180,10 +180,11 @@ void menuecho(int v)
 		}else {
 			glutChangeToMenuEntry(1,"Show Axes",70);
 		}
-		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes) glutChangeToMenuEntry(9,"Hide All",99);
-		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes) glutChangeToMenuEntry(9,"Show All",99);
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) glutChangeToMenuEntry(9,"Hide All",99);
+		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes && !showPassMap && !showBirds) glutChangeToMenuEntry(9,"Show All",99);
 		break;
 		
+	
 	case 80: 
 		glutSetMenu(showHideSubMenu);
 		showSpeed = !showSpeed;
@@ -192,8 +193,8 @@ void menuecho(int v)
 		}else {
 			glutChangeToMenuEntry(2,"Show Speed",80);
 		}
-		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes) glutChangeToMenuEntry(9,"Hide All",99);
-		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes) glutChangeToMenuEntry(9,"Show All",99);
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) glutChangeToMenuEntry(9,"Hide All",99);
+		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes && !showPassMap && !showBirds) glutChangeToMenuEntry(9,"Show All",99);
 		break;
 	
 	case 90:
@@ -204,8 +205,8 @@ void menuecho(int v)
 		}else {
 			glutChangeToMenuEntry(3,"Show SightCircle",90);
 		}
-		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes) glutChangeToMenuEntry(9,"Hide All",99);
-		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes) glutChangeToMenuEntry(9,"Show All",99);
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) glutChangeToMenuEntry(9,"Hide All",99);
+		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes && !showPassMap && !showBirds) glutChangeToMenuEntry(9,"Show All",99);
 		break;
 	case 91:
 		glutSetMenu(showHideSubMenu);
@@ -215,8 +216,8 @@ void menuecho(int v)
 		}else {
 			glutChangeToMenuEntry(4,"Show ObstCircle",91);
 		}
-		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes) glutChangeToMenuEntry(9,"Hide All",99);
-		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes) glutChangeToMenuEntry(9,"Show All",99);
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) glutChangeToMenuEntry(9,"Hide All",99);
+		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes && !showPassMap && !showBirds) glutChangeToMenuEntry(9,"Show All",99);
 		break;
 	case 92:
 		glutSetMenu(showHideSubMenu);
@@ -226,8 +227,8 @@ void menuecho(int v)
 		}else {
 			glutChangeToMenuEntry(5,"Show DistCircles",92);
 		}
-		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes) glutChangeToMenuEntry(9,"Hide All",99);
-		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes) glutChangeToMenuEntry(9,"Show All",99);
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) glutChangeToMenuEntry(9,"Hide All",99);
+		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes && !showPassMap && !showBirds) glutChangeToMenuEntry(9,"Show All",99);
 		break;
 	case 93:
 		glutSetMenu(showHideSubMenu);
@@ -241,8 +242,8 @@ void menuecho(int v)
 		}
 			//clearStepList();
 		}
-		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes) glutChangeToMenuEntry(9,"Hide All",99);
-		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes) glutChangeToMenuEntry(9,"Show All",99);
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) glutChangeToMenuEntry(9,"Hide All",99);
+		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes && !showPassMap && !showBirds) glutChangeToMenuEntry(9,"Show All",99);
 		break;
 	case 94:
 		glutSetMenu(showHideSubMenu);
@@ -252,8 +253,8 @@ void menuecho(int v)
 		}else {
 			glutChangeToMenuEntry(7,"Show NearBirdsAverage",94);
 		}
-		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes) glutChangeToMenuEntry(9,"Hide All",99);
-		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes) glutChangeToMenuEntry(9,"Show All",99);
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) glutChangeToMenuEntry(9,"Hide All",99);
+		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes && !showPassMap && !showBirds) glutChangeToMenuEntry(9,"Show All",99);
 		break;
 	case 95:
 		glutSetMenu(showHideSubMenu);
@@ -263,14 +264,14 @@ void menuecho(int v)
 		}else {
 			glutChangeToMenuEntry(8,"Show IDs",95);
 		}
-		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes) glutChangeToMenuEntry(9,"Hide All",99);
-		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes) glutChangeToMenuEntry(9,"Show All",99);
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) glutChangeToMenuEntry(9,"Hide All",99);
+		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes && !showPassMap && !showBirds) glutChangeToMenuEntry(9,"Show All",99);
 		break;
 		
 	case 99:
 		glutSetMenu(showHideSubMenu);
-		if(showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes) {
-			showNearBirdsAverage = showSteps = showDistCircles = showObstCircle = showSightCircle = showSpeed = axes = false;
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) {
+			showIDs = showNearBirdsAverage = showSteps = showDistCircles = showObstCircle = showSightCircle = showSpeed = axes = showPassMap = showBirds = false;
 			glutChangeToMenuEntry(1,"Show Axes",70);
 			glutChangeToMenuEntry(2,"Show Speed",80);
 			glutChangeToMenuEntry(3,"Show SightCircle",90);
@@ -280,8 +281,10 @@ void menuecho(int v)
 			glutChangeToMenuEntry(7,"Show NearBirdsAverage",94);
 			glutChangeToMenuEntry(8,"Show IDs",95);
 			glutChangeToMenuEntry(9,"Show All",99);
+			glutChangeToMenuEntry(10,"Show PassMap",81);
+			glutChangeToMenuEntry(11,"Show Birds",82);
 		}else {
-			showNearBirdsAverage = showSteps = showDistCircles = showObstCircle = showSightCircle = showSpeed = axes = true;
+			showIDs = showNearBirdsAverage = showSteps = showDistCircles = showObstCircle = showSightCircle = showSpeed = axes = showPassMap = showBirds = true;
 			glutChangeToMenuEntry(1,"Hide Axes",70);
 			glutChangeToMenuEntry(2,"Hide Speed",80);
 			glutChangeToMenuEntry(3,"Hide Sight",90);
@@ -291,7 +294,33 @@ void menuecho(int v)
 			glutChangeToMenuEntry(7,"Hide NearBirdsAverage",94);
 			glutChangeToMenuEntry(8,"Hide IDs",95);
 			glutChangeToMenuEntry(9,"Hide All",99);
+			glutChangeToMenuEntry(10,"Hide PassMap",81);
+			glutChangeToMenuEntry(11,"Hide Birds",82);
 		}
+		break;
+	
+	case 81:
+		glutSetMenu(showHideSubMenu);
+		showPassMap = !showPassMap;
+		if(showPassMap) {
+			glutChangeToMenuEntry(10,"Hide PassMap",81);
+		}else {
+			glutChangeToMenuEntry(10,"Show PassMap",81);
+		}
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) glutChangeToMenuEntry(9,"Hide All",99);
+		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes && !showPassMap && !showBirds) glutChangeToMenuEntry(9,"Show All",99);
+		break;
+	
+	case 82:
+		glutSetMenu(showHideSubMenu);
+		showBirds = !showBirds;
+		if(showBirds) {
+			glutChangeToMenuEntry(11,"Hide Birds",82);
+		}else {
+			glutChangeToMenuEntry(11,"Show Birds",82);
+		}
+		if(showIDs && showNearBirdsAverage && showSteps && showDistCircles && showObstCircle && showSightCircle && showSpeed && axes && showPassMap && showBirds) glutChangeToMenuEntry(9,"Hide All",99);
+		else if(!showIDs && !showNearBirdsAverage && !showSteps && !showDistCircles && !showObstCircle && !showSightCircle && !showSpeed && !axes && !showPassMap && !showBirds) glutChangeToMenuEntry(9,"Show All",99);
 		break;
 		
 		

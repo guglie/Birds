@@ -43,6 +43,10 @@ using namespace std;
  *											 Inserire pulsanti nella toolbar che emulino le più importanti voci del menu popup.
  * - RIPRODUZIONE: Permettere l'evoluzione dei caratteri degli uccelli tramite la riproduzione e la "selezione naturale".
  * - PREDATORI: Altre creature che inseguono e mangiano gli uccelli (l'evoluzione cambia?).
+ * - MIGLIORIE ALLE PRESTAZIONI: Ottimizzare i calcoli per avere maggiore fluidità e poter aumentare il numero massimo
+ *															 di uccelli. Inserire una modalità "velocità massima" (niente ritardi, magari anche senza
+ *															 calcoli grafici).
+ * - MIGLIORIE ALLA PASSMAP: Possibilità di scegliere la definizione, salvataggi automatici (immagini o dati) ogni tot.
  */
 
 
@@ -72,10 +76,18 @@ static void timerCallback (int value) {
 	}
 	
 	
-	for (int i=0; i<birdNum; i++)
-		birds[i]->doStep();
+	if(!paused) {
+		for (int i=0; i<birdNum; i++) {
+			birds[i]->doStep();
+		
+			// aggiorna la passMap
+			if(birds[i]->live)
+				passMapUpdate(birds[i]->posX, birds[i]->posY);
+		}
 	
-	cicli++;
+		cicli++;
+	
+	}
 	
 	if(liveBirdNum > 600) pointSize = lineWidth = 2.0;
 	else if(liveBirdNum > 200) pointSize = lineWidth = 3.0;
@@ -97,7 +109,7 @@ static void timerCallback (int value) {
 int main(int argc, char *argv[]) //modificata il 13.9.10
 {
 
-
+	
 
 
   if (argc < 2 || argc > 6 || atoi(argv[1]) > MAXBIRDS) {
@@ -268,6 +280,8 @@ int main(int argc, char *argv[]) //modificata il 13.9.10
   glutAddMenuEntry("Show NearBirdsAverage", 94);
   glutAddMenuEntry("Show IDs", 95);
   glutAddMenuEntry("Show All", 99);
+	glutAddMenuEntry("Show PassMap",81);
+	glutAddMenuEntry("Hide Birds",82);
 
   attribMenu = glutCreateMenu(menuecho);
   glutAddSubMenu("Bird", birdSubMenu);
@@ -301,7 +315,7 @@ int main(int argc, char *argv[]) //modificata il 13.9.10
 
   if (!obstacleTest2) glutTimerFunc(10, statsUpdate, 0);
 
-
+	passMapInit();
 
   glutDisplayFunc(display);
 

@@ -1,4 +1,39 @@
 
+/* fare la funzione ausiliaria che disegna la passMap */
+
+void displayPassMap() {
+	
+	for(int i=0; i<QUADS_FOR_EDGE_OF_MAP; i++)
+		for(int j=0; j<QUADS_FOR_EDGE_OF_MAP; j++) { //disegna il quadrato con colore pesato su passMap[i][j] / maxvalPass
+			
+			//if(passMap[i][j] > 0) {
+				glColor3f(0.0,0.0,passMap[i][j]*1.0 / maxvalPass);
+			
+				float x1, y1, x2, y2;
+				x1=i*quadMapLength-1.0;
+				y1=j*quadMapLength-1.0;
+				
+				x2=(i+1)*quadMapLength;
+				y2=(j+1)*quadMapLength;
+			
+				glRectf(x1,y1,x2,y2);
+			//}
+		}
+}
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+
 /* funzione ausiliaria che disegna una stringa di caratteri 
    ad una certa posizione */
 void displayString(float x, float y, string s)
@@ -331,6 +366,10 @@ void display_work(int x0, int y0, int w, int h) {
     glVertex2f(-1.0, 1.0);
     glEnd();
   }
+  
+  if(showPassMap)
+  	displayPassMap();
+  
 
 
 	glColor3f(0.5, 0.2, 0.5); // disegno gli ostacoli
@@ -385,7 +424,7 @@ if (obstacleTest2) {
     printf("\nDEBUG3 displayWork.\n");
     fflush(stdout);
   }
-
+	if(showBirds)
   for (int i = 0; i < birdNum; i++) // disegno gli uccelli
   {
     if (birds[i]->live) {

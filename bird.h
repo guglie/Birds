@@ -527,7 +527,7 @@ void accelForHawks(float * xAcc, float * yAcc) {
 
 
 
-          pushStep(posX,posY,speed);
+          //pushStep(posX,posY,speed);
           if(DEBUG) {printf("\nDEBUG step. bird ID %d \n", id); fflush(stdout);}
 			// per tutti gli ostacoli calcola la distanza
 			//calcNearObst();

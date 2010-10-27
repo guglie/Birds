@@ -14,6 +14,9 @@
 #define FRAMES_PER_SEC 20
 #define CIRCLE_STEPS 36
 
+#define QUADS_FOR_EDGE_OF_MAP 400
+bool showPassMap = false;
+
 #define MAX_STEPS_BUFFER 1000
 
 #define FOLLOW_FRIENDS_FACTOR 3
@@ -21,6 +24,10 @@
 #define EAT_DIST 0.003
 
 #define MAX_OBSTACLES 2
+
+
+bool showBirds = true;
+
 bool obstacleTest = false;  // test if a bird can pass through a wall
 float LETHAL_DISTANCE = 0.005;  // 0.00025?
 

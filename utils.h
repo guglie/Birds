@@ -1,5 +1,16 @@
 
 
+void pauseBirds (void) {
+	if(paused) {
+			millsec_per_frame = old_millsec;
+		} else {
+			old_millsec = millsec_per_frame;
+			millsec_per_frame = 1000 / FRAMES_PER_SEC * 100;
+		}
+	paused = !paused;
+}
+
+
 void reduceVectComponentsToMax (float * vx, float * vy, float max) //modificata il 13.9.10
 {
 	/*if((*vx) >= 0)
